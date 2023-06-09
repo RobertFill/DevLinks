@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --text-color: white;
+    --bg-url: url(./assets/assets/bg-desktop-light.jpg);
+    --switch-bg-url: url(./assets/assets/moon-stars.svg);
+}
+
+body {
+    background: url(./assets/assets/bg-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+body * {
+    max-width: 1580px;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+}
+
+.light {
+    background: url(./assets/assets/bg-desktop-light.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    --switch-bg-url: url(./assets/assets/sun.svg);
+    --text-color: black;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 8rem;
+    line-height: 25px;
+}
+
+#photo {
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 1px solid grey;
+    padding: 1.8px;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+}
+
+.profile p {
+    text-align: center;
+    line-height: 10px;
+    margin-top: 8px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+
+
+
+}
+
+
+
+.btn-link button {
+
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    width: 540px;
+    height: 56px;
+
+    border-radius: 8px;
+
+    margin: 7px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    border: 1px solid grey;
+
+    transition: all .4s;
+
+    cursor: pointer;
+
+
+}
+
+.btn-link button:hover {
+    background-color: rgb(133, 66, 66)
+}
+#link-1_2{
+    display: none;
+}
+#link-2_2{
+    display: none;
+}
+#link-3_2{
+    display: none;
+}
+#link-4_2{
+    display: none;
+}
+
+/*----------lighmode---------*/
+.light #link-1_2{
+    display: block;
+}
+.light #link-2_2{
+    display: block;
+}
+.light #link-3_2{
+    display: block;
+}
+.light #link-4_2{
+    display: block;
+}
+.light #link-1{
+    display: none;
+}
+.light #link-2{
+    display: none;
+}
+.light #link-3{
+    display: none;
+}
+.light #link-4{
+    display: none;
+}
+.media-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 3rem;
+
+    margin-top: 20px;
+    font-size: 24px;
+
+
+}
+
+
+.light .media-social {
+
+    gap: 2.3rem;
+
+}
+
+
+
+#switch span {
+    display: block;
+    width: 64px;
+    height: 24px;
+
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid grey;
+    border-radius: 9999px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    margin: auto;
+    position: relative;
+
+    top: -15px;
+    z-index: 0;
+
+}
+
+#switch button {
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-bg-url) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+
+
+    position: relative;
+    top: 1.2rem;
+    left: 3rem;
+
+    z-index: 2;
+
+    transition: ease-in-out .2s;
+
+
+}
+
+
+.light #switch button {
+
+    transition: ease-in-out .2s;
+    left: 5.2rem;
+}
+
+footer {
+    margin-top: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+}
+@media (max-width:414px ) {
+
+    body {
+        background: url(./assets/assets/bg-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+    }
+    .light{
+        background: url(./assets/assets/bg-mobile-light.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .buttons button {
+        width: 400px;
+    }
+}
+@media (max-width:390px ) {
+    .buttons button {
+        width: 350px;
+    }
+}
